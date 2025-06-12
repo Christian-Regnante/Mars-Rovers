@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Rajdhani:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Mars Rover Photos Generator</title>
+</head>
+<body>
+    <div class="ball-container">
+        <div class="ballon"></div>
+        <div class="ballon"></div>
+        <div class="ballon"></div>
+        <div class="ballon"></div>
+    </div>
+    <main>
+        <header>
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-meteor"></i>
+                    Mars Rover Photos</h1>
+                <P>Image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars</P>
+            </div>
+        </header>
+
+        <section class="find-wrapper">
+            
+            <div class="find-content">
+                <div class="close">
+                    <button class="close-mark"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <h3>Cameras Avaialable with All Options:</h3>
+                <div class="listed cameras">
+                    <ul>
+                        <li><button id="FHAZ" onclick="frontCam()">FHAZ - Front Hazard Avoidance Camera</button></li>
+                        <li><button id="RHAZ" onclick="rearCam()">RHAZ - Rear Hazard Avoidance Camera</button></li>
+                        <li><button id="NAV" onclick="navCam()">NAVCAM - Navigation Camera</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="main-wrapper main-contaier">
+                <div class="helper button">
+                    <i class="fa-solid fa-satellite-dish click-option" title="More Option"></i>
+                    <span class="i option">More Option</span>
+                </div>
+
+                <div class="intro welcome-txt">
+                    <p>
+                        To the Stars Through endless skies, NASA dares, To touch the stars, and breathe the air. With every mission, bold and true, The unknown becomes a view. Exploring space, both near and far, A journey guided by each star.The universe, a story told, By those who reach for worlds of gold.
+                    </p>
+                </div>
+                <div class="intro rovers-result">
+                    <div class="rovers-menu">
+                        <ul>
+                            <li><button class="rover-links">Curiosity</button></li>
+                            <li><button class="rover-links">Opportunity</button></li>
+                            <li><button class="rover-links">Spirit</button></li>
+                        </ul>
+                    </div>
+                    <div class="photo-holder">
+                        <div class="card rover-card1">
+                            <div class="card-img"></div>
+                            <div class="card-details">
+                                <p>Camera Name: <span class="Cname"></span></p>
+                                <p>Full Name: <span class="Fname"></span></p>
+                                <p>Launch Date: <span class="launch"></span></p>
+                                <p>Landing Date: <span class="landing"></span></p>
+                                <p>Status: <span class="status"></span></p>
+                            </div>
+                        </div>
+                        <div class="card rover-card2">
+                            <div class="card-img"></div>
+                            <div class="card-details">
+                                <p>Camera Name: <span class="Cname"></span></p>
+                                <p>Full Name: <span class="Fname"></span></p>
+                                <p>Launch Date: <span class="launch"></span></p>
+                                <p>Landing Date: <span class="landing"></span></p>
+                                <p>Status: <span class="status"></span></p>
+                            </div>
+                        </div>
+                        <div class="card rover-card3">
+                            <div class="card-img"></div>
+                            <div class="card-details">
+                                <p>Camera Name: <span class="Cname"></span></p>
+                                <p>Full Name: <span class="Fname"></span></p>
+                                <p>Launch Date: <span class="launch"></span></p>
+                                <p>Landing Date: <span class="landing"></span></p>
+                                <p>Status: <span class="status"></span></p>
+                            </div>
+                        </div>
+                        <div class="card rover-card4">
+                            <div class="card-img"></div>
+                            <div class="card-details">
+                                <p>Camera Name: <span class="Cname"></span></p>
+                                <p>Full Name: <span class="Fname"></span></p>
+                                <p>Launch Date: <span class="launch"></span></p>
+                                <p>Landing Date: <span class="landing"></span></p>
+                                <p>Status: <span class="status"></span></p>
+                            </div>
+                        </div>
+                        <div class="card rover-card5">
+                            <div class="card-img"></div>
+                            <div class="card-details">
+                                <p>Camera Name: <span class="Cname"></span></p>
+                                <p>Full Name: <span class="Fname"></span></p>
+                                <p>Launch Date: <span class="launch"></span></p>
+                                <p>Landing Date: <span class="landing"></span></p>
+                                <p>Status: <span class="status"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+<script src="script.js"></script>

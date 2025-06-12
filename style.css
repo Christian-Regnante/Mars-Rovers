@@ -1,0 +1,440 @@
+:root {
+    --primary-color: rgb(0, 255, 88);
+    --secondary-color: rgb(75, 185, 121);
+    --third-color: rgb(72, 121, 255);
+    --fourth-color: rgb(54, 214, 219);
+    --bg-color1: rgba(6, 4, 15, 0.021);
+    --bg-color2: rgb(6, 3, 22);
+    --text-color: #333;
+    --primary-text-color: #dee9ee;
+    --secondary-text-color: #d8cccc;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family:'Courier New', Courier, monospace; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: "inter";
+    color: var(--primary-text-color);
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0e1416, #0c1724);
+}
+
+/* .ball-container {
+
+} */
+
+.ball-container .ballon {
+    position: fixed;
+    filter: blur(30px);
+    opacity: 0.8888;
+    z-index: -1;
+}
+
+.ball-container .ballon:nth-child(1) {
+    width: 420px;
+    height: 420px;
+    top: -50px;
+    right: -150px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color), var(--fourth-color), var(--third-color));
+    border-radius: 50%;
+    box-shadow: 0px -10px 20px rgba(0, 255, 89, 0.2),
+                10px 0px 20px rgb(1, 196, 180, 0.2),
+                0px 10px 20px rgb(0, 89, 255, 0.2),
+                -10px 0px 20px rgb(1, 196, 180, 0.2);
+    animation: float 8s ease-in-out infinite;
+    /* filter: blur(5px); */
+}
+.ball-container .ballon:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    top: 20px;
+    left: 200px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color), var(--fourth-color), var(--third-color));
+    border-radius: 50%;
+    box-shadow: 0px -10px 20px rgba(0, 255, 89, 0.2),
+                10px 0px 20px rgb(1, 196, 180, 0.2),
+                0px 10px 20px rgb(0, 89, 255, 0.2),
+                -10px 0px 20px rgb(1, 196, 180, 0.2);
+    animation: float 3s ease-in-out infinite;
+    /* filter: blur(5px); */
+}
+.ball-container .ballon:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: 200px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color), var(--fourth-color), var(--third-color));
+    border-radius: 50%;
+    box-shadow: 0px -10px 20px rgba(0, 255, 89, 0.2),
+                10px 0px 20px rgb(1, 196, 180, 0.2),
+                0px 10px 20px rgb(0, 89, 255, 0.2),
+                -10px 0px 20px rgb(1, 196, 180, 0.2);
+    animation: float 5s ease-in-out alternate-reverse infinite;
+    /* filter: blur(5px); */
+}
+.ball-container .ballon:nth-child(4) {
+    width: 500px;
+    height: 400px;
+    bottom: -150px;
+    left: -100px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color), var(--fourth-color), var(--third-color));
+    border-radius: 50%;
+    box-shadow: 0px -10px 20px rgba(0, 255, 89, 0.2),
+                10px 0px 20px rgb(1, 196, 180, 0.2),
+                0px 10px 20px rgb(0, 89, 255, 0.2),
+                -10px 0px 20px rgb(1, 196, 180, 0.2);
+    animation: float 8s ease-in-out alternate-reverse infinite;
+    /* filter: blur(5px); */
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* The main part of the Page */
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* backdrop-filter: blur(20px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 0.5rem;
+}
+
+/* --------------- Intro Seaction ------------------ */
+
+main header {
+    /* background-color: red; */
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    margin-top: 2rem;
+}
+header .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+header .logo > h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+}
+.logo > p {
+    font-size: 0.7rem;
+    width: 25%;
+    letter-spacing: 0.5px;
+    padding: 0.5rem;
+}
+section {
+    /* background-color: #0c1724; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .main-wrapper {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    padding: 2rem;
+    /* background: rgba(37, 33, 33, 0.096); */
+    /* backdrop-filter: blur(50px); */
+    border-radius: 10px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-wrapper .helper {
+    align-self: center;
+    /* background-color: red; */
+    /* transform: translate(-20px, -30px); */
+}
+.helper > i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    rotate: 135deg;
+}
+.helper > .option {
+    position: absolute;
+    top: 40px;
+    right: -60px;
+    background-color: rgba(54, 54, 54, 0.158);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    visibility: hidden; /* Hover More Option Icon */
+    /* backdrop-filter: blur(500px); */
+    border: 1px solid rgba(110, 109, 109, 0.281);
+    color: var(--fourth-color);
+}
+.main-wrapper .welcome-txt p {
+    width: 600px;
+    height: 200px;
+    padding: 2rem;
+    /* background-color: #0c1724; */
+    backdrop-filter: blur(50px);
+    text-align: justify;
+    line-height: 1.8rem;
+    font-size: 0.8889rem;
+    border-radius: 10px;
+}
+
+/* -----------Popup Section------------- */
+
+/* main .popup {
+    visibility: hidden;
+    display: flex;
+} */
+main .find-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    background: transparent;
+    backdrop-filter: blur(40px);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    display: none;
+    /* background-color: #0c1724; */
+    /* transform: translateY(-200px); */
+}
+.find-wrapper .find-content {
+    position: relative;
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-color: #0c172452;
+    border-radius: 10px;
+}
+.find-content .close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+}
+
+.find-content > h3 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.listed {
+    width: 50%;
+}
+.find-content .listed li {
+    list-style: none;
+    margin: 2rem 0;
+    
+}
+.find-content .listed li button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgba(171, 171, 177, 0.185), rgba(120, 120, 126, 0.226));
+    box-shadow: 0px -2px 2px #b8b6b6;
+}
+.find-content .close button{
+    background: linear-gradient(to bottom, rgba(13, 11, 24, 0.849), rgba(5, 5, 29, 0.911));
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* filter: blur(1px); */
+}
+.close > button::after {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    content: '';
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color), var(--fourth-color), var(--third-color));
+    filter: blur(5px);
+    border-radius: 50%;
+    z-index: -1;
+}
+.close button > i {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* ---------------- Rovers Photo cards Section --------------- */
+
+.welcome-txt {
+    display: flex;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    height: 320px;
+}
+
+.rovers-result {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* background: rgba(10, 24, 29, 0.5); */
+    backdrop-filter: blur(50px);
+    padding: 1rem;
+    /* transform: translateY(0px); */
+    border-radius: 10px;
+    padding: 1.5rem;
+    /* width: 100%;
+    height: 100%; */
+}
+.rovers-result .rovers-menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 1rem;
+}
+.rovers-menu ul li button {
+    border: none;
+    background: none;
+    /* background: linear-gradient(to bottom, rgba(171, 171, 177, 0.185), rgba(120, 120, 126, 0.226)); */
+    /* border-left: 1px solid rgba(78, 78, 80, 0.705); */
+    width: 150px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.5s linear;
+}
+
+/* ------------------------------  Remember to do an underline glow  -------------------- */
+
+.rovers-menu li:nth-child(1) button:hover {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color), var(--third-color), var(--fourth-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 1px 1px 4px var(--primary-color),
+                 -1px -1px 4px var(--fourth-color); */
+    font-size: 1.3rem;
+}
+.rovers-menu li:nth-child(2) button:hover {
+        background: linear-gradient(to right, var(--third-color), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 1px 1px 4px var(--primary-color),
+                 -1px -1px 4px var(--third-color); */
+    font-size: 1.3rem;
+}
+.rovers-menu li:nth-child(3) button:hover {
+    background: linear-gradient(to right, var(--third-color), var(--third-color), var(--primary-color), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 1px 1px 4px var(--third-color),
+                 -1px -1px 4px var(--primary-color); */
+    font-size: 1.3rem;
+}
+.photo-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    flex: 1;
+}
+.photo-holder .card {
+    width: 270px;
+    height: 330px;
+    /* background: rgba(10, 24, 29, 0.603); */
+    border-radius: 10px;
+    /* backdrop-filter: blur(100px); */
+    cursor: pointer;
+    position: relative;
+}
+.card .card-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-image: url("https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG"); */
+    background-size: cover;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--fourth-color);
+    /* visibility: hidden; */
+}
+.photo-holder .card:hover .card-img {
+    transform: perspective(20px) rotateX(2deg) translateY(-50px);
+    filter: blur(5px);
+    box-shadow: none;
+}
+.card .card-details {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background: rgba(10, 24, 29, 0.603); */
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    transition: 1s;
+    /* visibility: hidden; */
+    padding: 0.6rem;
+    opacity: 0;
+}
+.card:hover .card-details {
+    height: 60%;
+    width: 130%;
+    background: rgba(10, 24, 29, 0.603);
+    transform: translateY(10px) translateX(-35px) perspective(10px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(131, 178, 197, 0.897);
+    opacity: 1;
+}
+.card-details > * {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.card-details p {
+    color: #b4effd;
+}
+.card-details p > span {
+    color: #ebf1e3cc;
+}
