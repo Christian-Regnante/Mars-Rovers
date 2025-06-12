@@ -49,27 +49,27 @@ fhaz_cam.addEventListener('click', () => {
             })
 
             Cname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.name
                 }
             })
             Fname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.full_name
                 }
             })
             launch.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.launch_date
                 }
             })
             landing.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.landing_date
                 }
             })
             camStatus.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.status
                 }
             })
@@ -96,27 +96,27 @@ rhaz_cam.addEventListener('click', () => {
             })
 
             Cname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.name
                 }
             })
             Fname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.full_name
                 }
             })
             launch.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.launch_date
                 }
             })
             landing.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.landing_date
                 }
             })
             camStatus.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.status
                 }
             })
