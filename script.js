@@ -45,7 +45,9 @@ fhaz_cam.addEventListener('click', () => {
         .then(data => {
             console.log(data.photos[0].rover.status)
             img_holder.forEach(item => {
-                item.style.backgroundImage = `url(${data.photos[0].img_src})`
+                for(let i = 0; i < 5; i++){
+                    item.style.backgroundImage = `url(${data.photos[0].img_src})`
+                }
             })
 
             Cname.forEach(item => {
@@ -88,11 +90,13 @@ rhaz_cam.addEventListener('click', () => {
         popup_box.style.top = '0%'
         // helper_btn.style.transform = 'translate(-100px)'
 
-        fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2000&name=RHAZ&api_key=K7jSIwLYro1rbad9wXOZp2CIuAisVLomwE2HunGm').then(response => response.json())
+        fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=2000&name=RHAZ&api_key=K7jSIwLYro1rbad9wXOZp2CIuAisVLomwE2HunGm').then(response => response.json())
         .then(data => {
             console.log(data.photos[0].rover.status)
             img_holder.forEach(item => {
-                item.style.backgroundImage = `url(${data.photos[0].img_src})`
+                for (let i = 0; i < 5; i++){
+                    item.style.backgroundImage = `url(${data.photos[i].img_src})`
+                }
             })
 
             Cname.forEach(item => {
@@ -135,35 +139,37 @@ nav_cam.addEventListener('click', () => {
         popup_box.style.top = '0%'
         // helper_btn.style.transform = 'translate(0px, -100px)'
 
-        fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&page=2&name=NAVCAM&api_key=K7jSIwLYro1rbad9wXOZp2CIuAisVLomwE2HunGm').then(response => response.json())
+        fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=100&page=2&name=NAVCAM&api_key=K7jSIwLYro1rbad9wXOZp2CIuAisVLomwE2HunGm').then(response => response.json())
         .then(data => {
             console.log(data.photos[0].rover.status)
             img_holder.forEach(item => {
-                item.style.backgroundImage = `url(${data.photos[0].img_src})`
+                for (let i = 0; i < 5; i++){
+                    item.style.backgroundImage = `url(${data.photos[i].img_src})`
+                }
             })
 
             Cname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.name
                 }
             })
             Fname.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].camera.full_name
                 }
             })
             launch.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.launch_date
                 }
             })
             landing.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.landing_date
                 }
             })
             camStatus.forEach(item => {
-                for (let i = 0; i < 5; i+5){
+                for (let i = 0; i < 5; i++){
                     item.textContent = data.photos[i].rover.status
                 }
             })
